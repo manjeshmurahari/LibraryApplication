@@ -24,6 +24,11 @@ public class BookController {
     public Book updateBook(@RequestBody Book book) {
         return bookService.updateBook(book);
     }
+    
+    @GetMapping("/book/txt")
+    public String booktxt() {
+        return "hello everyone========";
+    }
 
     @GetMapping("/book/{id}")
     public Book getBook(@PathVariable long id){
